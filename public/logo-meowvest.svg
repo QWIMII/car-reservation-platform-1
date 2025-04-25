@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 400 400">
+  <g fill="#FFFFFF">
+    <path d="M250,190 C250,190 270,150 300,150 C330,150 350,180 350,180" stroke="#FFFFFF" stroke-width="8" fill="none" stroke-linecap="round"/>
+    <path d="M150,190 C150,190 130,150 100,150 C70,150 50,180 50,180" stroke="#FFFFFF" stroke-width="8" fill="none" stroke-linecap="round"/>
+    <path d="M150,190 L150,300 L105,300 C90,270 105,240 105,240 L80,170" stroke="#FFFFFF" stroke-width="8" fill="none"/>
+    <path d="M250,190 L250,300 L295,300 C310,270 295,240 295,240 L320,170" stroke="#FFFFFF" stroke-width="8" fill="none"/>
+    <path d="M150,190 C150,190 165,160 200,160 C235,160 250,190 250,190" stroke="#FFFFFF" stroke-width="8" fill="none"/>
+    <path d="M175,225 L170,215 Q200,195 230,215 L225,225" stroke="#FFFFFF" stroke-width="6" fill="none"/>
+    <path d="M165,180 L175,170" stroke="#FFFFFF" stroke-width="4" fill="none"/>
+    <path d="M235,180 L225,170" stroke="#FFFFFF" stroke-width="4" fill="none"/>
+  </g>
+  <text transform="translate(50, 340)" fill="#FFFFFF" font-family="sans-serif" font-size="48" font-weight="bold">MEOWVEST</text>
+</svg>

@@ -37,7 +37,7 @@ const Hero = () => {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="rounded-none text-base px-8 py-6 text-white border-white/30 hover:bg-white/10">
+            <Button asChild variant="default" size="lg" className="bg-black text-white border-none rounded-none text-base px-8 py-6 hover:bg-gray-900">
               <Link to="/about">
                 О нашем автопарке
               </Link>

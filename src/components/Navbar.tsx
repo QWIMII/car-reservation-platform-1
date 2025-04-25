@@ -26,7 +26,8 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
         <Link to="/" className="flex items-center space-x-2">
-          <span className="text-xl font-playfair font-bold">АВТОПАРК</span>
+          <img src="/logo-meowvest.svg" alt="MEOWVEST" className="h-10 w-auto" />
+          <span className="text-xl font-playfair font-bold">MEOWVEST</span>
         </Link>
 
         {/* Desktop Navigation */}
