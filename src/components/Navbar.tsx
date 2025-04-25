@@ -1,11 +1,13 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, User } from 'lucide-react';
+import AuthModal from '@/components/auth/AuthModal';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false); // В реальном приложении будет проверка через API
 
   useEffect(() => {
     const handleScroll = () => {
@@ -44,8 +46,19 @@ const Navbar = () => {
         </nav>
 
         <div className="hidden md:flex items-center space-x-4">
-          <Button variant="outline" size="sm" className="rounded-none border-primary/20 hover:border-primary/60">
-            Забронировать
+          {isLoggedIn ? (
+            <Button asChild variant="outline" size="sm" className="gap-2">
+              <Link to="/profile">
+                <User className="h-4 w-4" />
+                <span>Личный кабинет</span>
+              </Link>
+            </Button>
+          ) : (
+            <AuthModal />
+          )}
+          
+          <Button variant="default" size="sm" className="rounded-none border-primary/20 hover:border-primary/60">
+            <Link to="/catalog">Забронировать</Link>
           </Button>
         </div>
 
@@ -90,7 +103,34 @@ const Navbar = () => {
             >
               Контакты
             </Link>
-            <Button variant="default" size="sm" className="w-full mt-2">
+            {isLoggedIn ? (
+              <Link 
+                to="/profile" 
+                className="py-2 px-4 hover:bg-secondary/50 rounded transition flex items-center"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <User className="h-4 w-4 mr-2" />
+                Личный кабинет
+              </Link>
+            ) : (
+              <div className="py-2 px-4">
+                <AuthModal trigger={
+                  <Button size="sm" variant="outline" className="w-full justify-center">
+                    <User className="h-4 w-4 mr-2" />
+                    Войти
+                  </Button>
+                } />
+              </div>
+            )}
+            <Button 
+              variant="default" 
+              size="sm" 
+              className="mt-2"
+              onClick={() => {
+                setIsMenuOpen(false);
+                // Здесь можно добавить переход на страницу бронирования
+              }}
+            >
               Забронировать
             </Button>
           </div>
