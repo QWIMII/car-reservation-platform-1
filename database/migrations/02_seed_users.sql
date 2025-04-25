@@ -1,0 +1,6 @@
+-- Заполнение таблицы пользователей (пароли захешированы - пример для "password123")
+INSERT INTO users (first_name, last_name, email, password, phone, address, avatar, role) VALUES
+('Администратор', 'Системы', 'admin@meowvest.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '+7 (999) 123-45-67', 'г. Москва, ул. Примерная, д. 1', '/uploads/avatars/admin.jpg', 'admin'),
+('Иван', 'Петров', 'ivan@example.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '+7 (999) 123-45-67', 'г. Москва, ул. Примерная, д. 123, кв. 45', 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80', 'user'),
+('Мария', 'Сидорова', 'maria@example.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '+7 (999) 987-65-43', 'г. Санкт-Петербург, пр. Невский, д. 42, кв. 15', 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80', 'user'),
+('Алексей', 'Кузнецов', 'alex@example.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '+7 (999) 456-78-90', 'г. Казань, ул. Центральная, д. 7, кв. 22', 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80', 'user');
